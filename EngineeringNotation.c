@@ -74,7 +74,6 @@ void engineeringNotationConverter(double userNumber){
             exponentCount++; //Increase exponent count
         }
     }
-
     else{
         while(engNotationNumber < 1){ //In the lower outside range
             engNotationNumber *= 10; //Multiplies it to bring it in the range of 1 - 999
