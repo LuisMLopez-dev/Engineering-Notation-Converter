@@ -24,15 +24,14 @@ int main(void){
         do{
             printf("Do you want to convert another number?\nEnter 1 to continue, or enter 0 to end the program: ");
             scanf("%d", &userContinueStatus); //Determines if the user wants to contine or end the program
+            puts("");
         }while(userContinueStatus != 0 && userContinueStatus != 1);  //While the user has not entered a correct number, it will keep requesting a proper input
 
         if(userContinueStatus == 0){
             keepConverting = false; //Ends the program
-            puts("");
         }
         else{
             keepConverting = true; //The conversion continues
-            puts("");
         }        
     }
     printf("The program has ended\n"); //Program has ended
@@ -45,7 +44,7 @@ void engineeringNotationConverter(double userNumber){
     bool inUpperOutsideRange = false; //True represents that engNotationNumber is above 999, False represents it is between 0 and 1
 
     if(engNotationNumber < 0){
-        printf("Negative numbers are not accepted\n");
+        printf("Negative numbers are not accepted!\n");
         return;
     }
 
@@ -74,6 +73,7 @@ void engineeringNotationConverter(double userNumber){
             exponentCount++; //Increase exponent count
         }
     }
+
     else{
         while(engNotationNumber < 1){ //In the lower outside range
             engNotationNumber *= 10; //Multiplies it to bring it in the range of 1 - 999
@@ -96,7 +96,6 @@ void engineeringNotationConverter(double userNumber){
 
 char prefixSymbol(int exponentCount){
     char prefixChar;
-
     switch(exponentCount){
         case 24:
             prefixChar = 'Y'; //Yotta
@@ -148,7 +147,6 @@ char prefixSymbol(int exponentCount){
             break;
         default:
             prefixChar = ' '; //Out of range
-            break;
     }
     return prefixChar;
 }
