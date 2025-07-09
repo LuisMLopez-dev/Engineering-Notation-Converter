@@ -4,3 +4,4 @@ This is a C program for an Engineering Notation Converter, that receives a numbe
 Features:
 - Conversion Range: Yocto to Zetta (10^-24, to 10^24)
 - User-friendly number display
+- Clean and well-documented C code
